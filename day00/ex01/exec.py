@@ -12,6 +12,8 @@
 
 import sys
 
-s = sys.argv[::-1]
+s = sys.argv[1:]
+s.reverse()
+# s = sys.argv[1::-1]
 for i in s:
-	print(i[::-1], end = ' ')
+	print(i[::-1].swapcase(), end = ' ')
