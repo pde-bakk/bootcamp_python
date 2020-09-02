@@ -6,10 +6,9 @@
 #    By: pde-bakk <pde-bakk@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/09/01 16:04:43 by pde-bakk      #+#    #+#                  #
-#    Updated: 2020/09/01 18:47:21 by pde-bakk      ########   odam.nl          #
+#    Updated: 2020/09/02 18:56:28 by pde-bakk      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
-
 
 class Error(Exception):
    """Base class for other exceptions"""
@@ -66,8 +65,3 @@ class Recipe:
 		txt += ingrs + '\n\t' + "Description: " + self.description + '\n\t' \
 			+ "Recipe_type: " + self.recipe_type + '\n'
 		return txt
-
-ingred = ["boter", "kaas", "eieren"]
-taart = Recipe("Taart", 4, 120, ingred, "dessert")
-to_print = str(taart)
-print(to_print)
