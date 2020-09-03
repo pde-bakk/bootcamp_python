@@ -13,13 +13,16 @@
 from datetime import date
 from recipe import Recipe
 
+
 class Error(Exception):
 	"""Base class for exceptions"""
 	pass
 
+
 class RecipeException(Error):
 	"""Raised when the supplied recipe is invalid"""
 	pass
+
 
 class Book:
 	def __init__(self, name: str):

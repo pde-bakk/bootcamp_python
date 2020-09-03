@@ -10,25 +10,31 @@
 #                                                                              #
 # **************************************************************************** #
 
+
 class Error(Exception):
-   """Base class for other exceptions"""
-   pass
+	"""Base class for other exceptions"""
+	pass
+
 
 class CookingLvlException(Error):
-   """Raised when cooking level is invalid"""
-   pass
+	"""Raised when cooking level is invalid"""
+	pass
+
 
 class CookingTimeException(Error):
-   """Raised when the cooking time is negative"""
-   pass
+	"""Raised when the cooking time is negative"""
+	pass
+
 
 class IngredientsException(Error):
-   """Raised when the ingredient is not a string"""
-   pass
+	"""Raised when the ingredient is not a string"""
+	pass
+
 
 class RecipeTypeException(Error):
-   """Raised when the recipe doesnt have a valid type"""
-   pass
+	"""Raised when the recipe doesnt have a valid type"""
+	pass
+
 
 class Recipe:
 	def __init__(self, name: str, cooking_lvl: int, cooking_time: int, ingredients: tuple, recipe_type: str, description:str=""):
@@ -60,7 +66,7 @@ class Recipe:
 	def __str__(self):
 		txt = "Recipe name: " + self.name + '\n\t' \
 			+ "Cooking level: " + str(self.cooking_lvl) + '\n\t' \
-			+ "Cooking_time: " + str(self.cooking_time) + " minutes" + '\n\t' +"Ingredients: " 
+			+ "Cooking_time: " + str(self.cooking_time) + " minutes" + '\n\t' + "Ingredients: "
 		ingrs = ', '.join(stri for stri in self.ingredients)
 		txt += ingrs + '\n\t' + "Description: " + self.description + '\n\t' \
 			+ "Recipe_type: " + self.recipe_type + '\n'
