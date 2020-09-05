@@ -8,7 +8,6 @@ class Vector:
 			self.items = list()
 			while i < arg:
 				self.items.append(float(i))
-				# print(f"items[{i}] = {self.items[i]}")
 				i += 1
 		elif isinstance(arg, tuple):
 			# print("its a tuple")
