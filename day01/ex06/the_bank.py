@@ -17,9 +17,11 @@ class Account(object):
 	def is_corrupted(self) -> bool:
 		if len(self.__dict__) % 2 == 1:
 			return True
-		for attr in self.__dict__:
-			if attr.startswith(('b', 'zip', 'addr')):
-				return True
+		if any(map(lambda x: x.startswith(('b', 'zip', 'addr')), self.__dict__)):
+			return True
+		# for attr in self.__dict__:
+		# 	if attr.startswith(('b', 'zip', 'addr')):
+		# 		return True
 		if not {'name', 'id', 'value'}.issubset(self.__dict__):
 			return True
 		return False
